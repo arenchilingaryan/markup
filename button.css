@@ -1,0 +1,44 @@
+
+.button-block {
+    margin: 40px;
+    width: 300px;
+    position: relative;
+}
+
+.btn {
+    position: relative;
+    border: none;
+    width: 300px;
+    padding: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: normal;
+    color: white;
+    background: #5d326c;
+    transition: letter-spacing .2s;
+    border-radius: 8px;
+}
+
+.background {
+    position: absolute;
+    left: calc(50% - 10px);
+    top: -10px;
+    height: 70px;
+    border-radius: 20px;
+    width: 20px;
+    background-color: #ff1f71;
+    z-index: -1;
+    transition: box-shadow .2s linear, border-radius .2s linear, width .2s linear, left .2s linear;
+}
+
+.btn:hover {
+    letter-spacing: 8px;
+}
+
+.btn:hover + .background {
+    filter: blur(10px);
+    width: 250px;
+    left: calc(50% - 125px);
+    border-radius: 50px;
+    box-shadow: #ff1f71 0px 1px 4px, #ff1f71 0px 0px 0px 3px;
+}
